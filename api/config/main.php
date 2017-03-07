@@ -25,7 +25,8 @@ return [
             ]
         ],
         'user' => [
-            'identityClass' => 'common\models\ApiAccess',
+            //'identityClass' => 'common\models\ApiAccess',
+            'identityClass' => 'api\modules\v1\models\User',
             'enableAutoLogin' => false,
         ],
         'log' => [
@@ -45,7 +46,7 @@ return [
             'enableStrictParsing' => false,
             'showScriptName' => false,
             'rules' => [
-                ['class' => 'yii\rest\UrlRule', 'controller' => ['v1/user']],
+                ['class' => 'yii\rest\UrlRule', 'controller' => ['v1/user','v1/category']],
                 
             ],
         ],
